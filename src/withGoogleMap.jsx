@@ -46,7 +46,7 @@ export function withGoogleMap(BaseComponent) {
     }
 
     handleComponentMount(node) {
-      if (this.state.map || node === null) {
+      if (this.state.map || node === null || "undefined" === typeof google) {
         return
       }
       warning(
